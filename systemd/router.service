@@ -1,0 +1,6 @@
+[Unit]
+Description=ping google.com and restart router if no responde
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/restart.sh
