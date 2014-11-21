@@ -6,8 +6,9 @@ ROUTER_URL="http://192.168.13.1"	# root URL to router web page
 ROUTER_USERNAME="admin"			# router username
 ROUTER_PASSWORD="cisco"			# router password
 COOKIE_FILE="/tmp/cookie.test"
+PING_TARGET="8.8.8.8"
 
-ping -q -c1 google.com > /dev/null
+ping -q -c5 ${PING_TARGET} > /dev/null
 
 if [ $? -ne 0 ] ; then
 	if [ ! -f ${COOKIE_FILE} ] ; then
